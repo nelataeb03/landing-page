@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=M+PLUS+1+Code:wght@100..700&family=M+PLUS+Code+Latin:wght@100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /*
 	Stellar by HTML5 UP
@@ -99,11 +100,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color: #A9C5DE;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -120,15 +121,17 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
+		background-color: #A9C5DE;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+
+		font-family: "M PLUS 1 Code", monospace;
 		font-size: 17pt;
 		font-weight: 300;
-		line-height: 1.65;
+		line-height: 1.7;
+
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -205,9 +208,41 @@ input, select, textarea {
 			text-decoration: none;
 		}
 
-	h1 {
-		font-size: 2.5em;
-		line-height: 1.2;
+	header#header.alt h1 {
+		font-family: "Source Code Pro", monospace;
+		font-size: 115pt;
+		font-weight: 600;
+		line-height: 0.8;
+	}
+
+	header#header.alt p.sub {
+		font-family: "M PLUS 1 Code", monospace;
+		font-size: 19pt;
+		font-weight: 400;
+		margin-top: 10px;
+		margin-bottom: 0;
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	/* Typing effect */
+	#typing-effect {
+		display: inline;
+		border-right: 2px solid rgba(255, 255, 255, 0.75);
+		animation: typing-blink 1s step-end infinite;
+	}
+	
+	@keyframes typing-blink {
+		from, to {
+		border-color: transparent;
+		}
+		50% {
+		border-color: rgba(255, 255, 255, 0.75);
+		}
+	}
+	
+	h2, h3, h4, h5, h6 {
+		font-family: "M PLUS 1 Code", monospace;
+		font-weight: 500;
 	}
 
 	h2 {
@@ -215,11 +250,13 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1.25em;
+		font-size: 20pt;
 	}
 
 	h4 {
-		font-size: 1.1em;
+		font-size: 20pt;
+		font-weight: 500;
+		font-style: italic;
 	}
 
 	h5 {
@@ -2623,12 +2660,22 @@ input, select, textarea {
 
 		ul.icons li {
 			display: inline-block;
-			padding: 0 0.65em 0 0;
+			padding: 0 1.5em 0 0;
 		}
 
 			ul.icons li:last-child {
 				padding-right: 0 !important;
 			}
+
+	ul.icons li a {
+		text-decoration: none;
+		color: inherit;
+		font-size: 22pt;
+	}
+			
+	ul.icons li a:hover {
+		color: #b5b3b3;
+	}
 
 /* Section/Article */
 
@@ -2673,7 +2720,7 @@ input, select, textarea {
 			}
 
 	footer.major {
-		margin-top: 3em;
+		margin-top: 2em;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -2818,6 +2865,10 @@ input, select, textarea {
 			margin-left: 2em;
 			margin-top: 3em;
 			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
 		}
 
 			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
@@ -2826,6 +2877,13 @@ input, select, textarea {
 
 			.features li > :last-child {
 				margin-bottom: 0;
+			}
+	
+		.features li p {
+			font-size: 15px; 
+			line-height: 1.5; 
+			max-width: 300px; 
+			margin: 0 auto; 
 			}
 
 		@media screen and (max-width: 980px) {
@@ -2858,6 +2916,29 @@ input, select, textarea {
 					}
 
 		}
+	
+	.features .image {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+		position: relative;
+	}
+		
+	.features .image img {
+		width: 100%;
+		max-width: 250px;
+		height: auto;
+	}
+
+	.laptop .screen {
+		position: absolute;
+		top: 4.8%;
+		left: 3.1%; 
+		width: 93.2%; 
+		height: 63%; 
+		background-size: cover;
+		background-position: center;
+	}
 
 /* Statistics */
 
@@ -2871,6 +2952,9 @@ input, select, textarea {
 		padding: 0;
 		list-style: none;
 		cursor: default;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	gap: 2em;
 	}
 
 		.statistics li {
@@ -2880,28 +2964,28 @@ input, select, textarea {
 			flex: 1;
 			padding: 1.5em;
 			color: #ffffff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			text-align: center;
 		}
 
 			.statistics li.style1 {
-				background-color: #efa8b0;
+				background-color: #A9C5DE;
 			}
 
-			.statistics li.style2 {
-				background-color: #c79cc8;
+			.statistics li.style1 h3 {
+				font-size: 25px; 
+				font-weight: 450;
+				color: #ffffff !important;
 			}
 
-			.statistics li.style3 {
-				background-color: #a89cc8;
+			.statistics li.style1 p {
+				font-size: 20px; 
+				font-weight: 250;
+				color: #ffffff !important;
 			}
-
-			.statistics li.style4 {
-				background-color: #9bb2e1;
-			}
-
-			.statistics li.style5 {
-				background-color: #8cc9f0;
-			}
+			
 
 			.statistics li strong, .statistics li b {
 				display: block;
@@ -2968,6 +3052,18 @@ input, select, textarea {
 
 		}
 
+	.statistics .image {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+	}
+	
+	.statistics .image img {
+		width: 100%;
+		max-width: 100px; 
+		height: auto;
+	}
+
 /* Spotlight */
 
 	.spotlight {
@@ -3000,15 +3096,17 @@ input, select, textarea {
 		.spotlight .image {
 			display: inline-block;
 			margin-left: 4em;
-			padding: 0.65em;
-			border-radius: 100%;
+			padding: 0;
+			border-radius: 0;
 			border: solid 1px;
+			
 		}
 
 			.spotlight .image img {
 				display: block;
-				border-radius: 100%;
+				border-radius: 0;
 				width: 16em;
+				object-fit: cover;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3545,11 +3643,12 @@ input, select, textarea {
 		}
 
 		#main header.major h2:after {
-			background-color: #dddddd;
+			background: #E2E5E6;
+			/* background-color: #dddddd;
 			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0); */
 		}
 
 		#main table tbody tr {
@@ -3701,10 +3800,13 @@ input, select, textarea {
 		}
 
 		#footer .copyright {
-			width: 100%;
-			margin: 2.5em 0 2em 0;
-			font-size: 0.8em;
-			text-align: center;
+			margin: 0;
+		}
+
+		#footer .back-to-top {
+			margin: 0;
+			text-align: right;
+			display: inline-block;
 		}
 
 		@media screen and (max-width: 1280px) {
