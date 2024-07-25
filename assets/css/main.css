@@ -2876,6 +2876,10 @@ input, select, textarea {
 			margin: 0 auto; 
 			}
 
+		.features li h3 {
+			margin-bottom: 1px;
+		}
+
 		@media screen and (max-width: 980px) {
 
 			.features li {
@@ -2929,6 +2933,27 @@ input, select, textarea {
 		background-size: cover;
 		background-position: center;
 	}
+
+	.tech-tags {
+		margin-top: 0px;
+	}
+	
+	.tag {
+		display: inline-block;
+		background-color: #ffffff;
+		padding: 3px 8px;
+		margin: 0px 0px 9px 0px;
+		border-radius: 15px;
+		font-size: 12px;
+		border: 1px solid #ddd;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	
+	.tag:hover {
+		background-color: #f7f7f7;
+	}
+
+
 
 /* Statistics */
 
@@ -3088,7 +3113,6 @@ input, select, textarea {
 			margin-left: 4em;
 			padding: 0;
 			border-radius: 0;
-			border: solid 1px;
 			
 		}
 
