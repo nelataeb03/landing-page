@@ -1,0 +1,210 @@
+/* Body and container styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Iowan Old Style', serif;
+    background: linear-gradient(180deg, #333953, #62718a);
+}
+
+.container {
+    max-width: 1512px;
+    margin: auto;
+    padding: 70px;
+    border-radius: 5pt;
+}
+
+/* Title styling */
+.title {
+    font-size: 140px;
+    font-weight: 900;
+    color: #E9E5DC;
+    text-align: left;
+    margin: 50px 0;
+}
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 35px;
+    font-style: italic;
+    color: #E9E5DC;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+/* Trends Section */
+.trends-section {
+    background: #E9E5DC;
+    padding: 50px;
+    margin: 50px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo grid */
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.photo-pano {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-pano img {
+    width: 100%; 
+    height: auto;
+    max-width: 1000px; 
+}
+
+.photo-grid img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    align-items: center;
+}
+
+/* Text styling within trends */
+.trend-header {
+    font-size: 35px;
+    font-weight: 900;
+    font-style: italic;
+    color: #000;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 50px;
+}
+
+.trend-title {
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+    color: #000;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.trend-description {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #000;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.tech-stack {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+    /* Image Sliders */
+	.image-slider {
+		overflow-x: scroll;
+		white-space: nowrap;
+	}
+
+	.image-track {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.image-track img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin-right: 10px; /* Adjust the spacing between images */
+		cursor: pointer;
+	}
+
+	.image-slider::-webkit-scrollbar {
+		display: none; /* Hide the scrollbar */
+	}
+
+	.image-slider {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
+
+	.section-divider {
+		border: none;
+		border-top: 1px solid #ccc;
+		margin: 100px 0; /* Increased spacing for more pronounced separation */
+		width: 100%; /* Ensures the divider spans the full width */
+		padding-bottom: 0px;
+	}
+	
+	.section-title-divider {
+		border: none;
+		border-top: 1px solid #ccc;
+		margin: 10px auto; /* Centers the line below the title */
+		width: 50px; /* Makes the line shorter under the section title */
+	}
+
+/* Icons */
+.icon-circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.icon-circle i {
+    font-size: 80px;
+    color: #333;
+}
+
+.icon-circle a:hover i {
+    color: #808080; /* Change to grey on hover */
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-family: 'Iowan Old Style', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+}
+
+.footer-content p a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-content p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+	

@@ -2,10 +2,6 @@
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=M+PLUS+1+Code:wght@100..700&family=M+PLUS+Code+Latin:wght@100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-/*
-	can you see me
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -102,7 +98,7 @@ input, select, textarea {
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
 		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #3F4873 15%, #A9C5DE 85%);
+		background-image: url("images/overlay.png"), linear-gradient(180deg, #A9C5DE 40%, #3F4873 60%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -115,6 +111,7 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+		
 
 /* Type */
 
@@ -213,6 +210,14 @@ input, select, textarea {
 		line-height: 0.8;
 	}
 
+	header#header.alt h2 {
+		font-family: "Source Code Pro", monospace;
+		font-size: 80pt;
+		font-weight: 600;
+		line-height: 0.8;
+		margin-bottom: 30px;
+	}
+
 	header#header.alt p.sub {
 		font-family: "M PLUS 1 Code", monospace;
 		font-size: 22pt;
@@ -221,6 +226,22 @@ input, select, textarea {
 		margin-bottom: 0;
 		color: rgba(255, 255, 255, 0.75);
 	}
+
+	.generic-content h1, .generic-content h2, .generic-content h3, .generic-content h4, .generic-content h5, .generic-content h6 {
+		position: relative;
+		margin-bottom: 1.5em;
+	}
+	
+	.generic-content h2:after{
+		content: '';
+		display: block;
+		width: 150px; /* Adjust the width as needed */
+		height: 2px; /* Adjust the thickness as needed */
+		background-color: #d3d3d3; /* Adjust the color to match the screenshot */
+		margin: 0.5em auto 0;
+		border-radius: 2px;
+	}
+	
 
 	/* Typing effect */
 	#typing-effect {
@@ -249,6 +270,9 @@ input, select, textarea {
 
 	h3 {
 		font-size: 20pt;
+		border: none;
+		outline: none;
+		text-decoration: none;
 	}
 
 	h4 {
@@ -3658,11 +3682,6 @@ input, select, textarea {
 
 		#main header.major h2:after {
 			background: #E2E5E6;
-			/* background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0); */
 		}
 
 		#main table tbody tr {
@@ -3806,6 +3825,7 @@ input, select, textarea {
 		padding: 5em 5em 3em 5em ;
 		width: calc(100% + 2em);
 		margin: 0 0 3em -2em;
+		
 	}
 
 		#footer > * {
@@ -3821,6 +3841,12 @@ input, select, textarea {
 			margin: 0;
 			text-align: right;
 			display: inline-block;
+			text-decoration: underline;
+		}
+
+		.footer-content p a:hover {
+			text-align: right;
+			text-decoration: underline;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -3899,3 +3925,187 @@ input, select, textarea {
 			}
 
 		}
+
+.generic-content {
+    /* Background and spacing */
+    background-color: white; /* Light grey background */
+    padding: 25px;             /* Add padding around the content */
+    margin: 0 auto;            /* Center the content */
+    max-width: 1200px;         /* Set a max width for better readability */
+	border-radius: 3px;  
+
+    /* Typography */
+    font-family: "M PLUS 1 Code", monospace;
+		font-size: 17pt;
+		font-weight: 300;
+		line-height: 1.7;
+    color: #636363;                      /* Text color */
+    line-height: 1.6;                 /* Line height for readability */
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        color: #636363;                  /* Slightly darker color for headings */
+        margin-top: 60px;
+		margin-bottom: 20px;          /* Space below headings */
+        font-weight: 500;             /* Bold headings */
+    }
+
+    h1 {
+        font-size: 2.5rem;            /* Adjust font size for H1 */
+    }
+
+    h2 {
+        font-size: 37px;              /* Adjust font size for H2 */
+		margin-top: 50px;
+		margin-bottom: 10px; 
+		
+    }
+
+    h3 {
+        font-size: 1.75rem;           /* Adjust font size for H3 */
+    }
+
+	h4 {
+        font-size: 1rem;
+		margin-top: 40px;
+		margin-bottom: 10px;
+        font-weight: 350;
+		padding-left: 80px;
+		padding-right: 80px;
+    }
+
+    /* Links */
+    a {
+        color: #007bff;               /* Blue color for links */
+        text-decoration: none;        /* Remove underline */
+    }
+
+    a:hover {
+        text-decoration: underline;   /* Underline on hover */
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;              /* Ensure images are responsive */
+        height: auto;                 /* Maintain aspect ratio */
+        border-radius: 3px;           /* Slightly rounded corners */
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        background-color: #007bff;    /* Blue background */
+        color: rgba(255, 255, 255, 0.65);               /* White text */
+        padding: 10px 20px;           /* Padding for the button */
+        border-radius: 5px;           /* Rounded corners */
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;    /* Darker blue on hover */
+    }
+
+    /* Lists */
+    ul, ol {
+        margin-left: 20px;            /* Indent lists */
+        padding-left: 20px;           /* Add padding */
+    }
+
+    li {
+        margin-bottom: 50px;          /* Space between list items */
+    }
+
+    /* Grid Layout (for images or other content) */
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    
+    .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+		margin-left: 50px;
+    }
+
+    /* Apply a box shadow to elements */
+    .box-shadow {
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.65);; /* Subtle shadow for depth */
+    }
+    
+    /* Image Sliders */
+	.image-slider {
+		overflow-x: scroll;
+		white-space: nowrap;
+	}
+
+	.image-track {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.image-track img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin-right: 10px; /* Adjust the spacing between images */
+		cursor: pointer;
+	}
+
+	.image-slider::-webkit-scrollbar {
+		display: none; /* Hide the scrollbar */
+	}
+
+	.image-slider {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
+
+	.section-divider {
+		border: none;
+		border-top: 1px solid #ccc;
+		margin: 100px 0; /* Increased spacing for more pronounced separation */
+		width: 100%; /* Ensures the divider spans the full width */
+		padding-bottom: 0px;
+	}
+	
+	.section-title-divider {
+		border: none;
+		border-top: 1px solid #ccc;
+		margin: 10px auto; /* Centers the line below the title */
+		width: 50px; /* Makes the line shorter under the section title */
+	}
+	
+}
+
+/* Hover text styling */
+.image-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.image-link:hover .hover-text {
+    opacity: 1;
+}
+
+.image-link img {
+    cursor: pointer;
+}
